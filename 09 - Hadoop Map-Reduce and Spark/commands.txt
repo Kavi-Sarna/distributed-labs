@@ -1,0 +1,61 @@
+ssh -l student141  jumbo2.heinz.cmu.local
+        or
+ssh -oHostKeyAlgorithms=+ssh-rsa student141@jumbo2.heinz.cmu.local
+
+J0hnheinz!
+Ksarna@25
+
+
+pwd
+mkdir input
+mkdir output
+
+ls
+
+hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar pi 10 100000
+
+hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar pi 20 100000
+
+
+cd input
+
+pwd
+
+pico test
+
+
+cd ..
+hdfs dfs -copyFromLocal /home/student141/input/test /user/student141/input/test
+
+hdfs dfs -ls /user/student141/input
+
+hdfs dfs -cat /user/student141/input/test
+
+hdfs dfs -rm -r /user/student141/output
+
+
+hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar wordcount /user/student141/input /user/student141/output
+
+        hdfs dfs -rm -r /user/student141/output
+
+
+hdfs dfs -ls /user/student141/output
+
+
+hdfs dfs -cat /user/student141/output/part-r-00000
+
+
+hdfs dfs -getmerge /user/student141/output /home/student141/output/mergedfile.txt
+
+cat /home/student141/output/mergedfile.txt
+
+
+mapred job -list
+
+mapred job -kill <job_id>
+
+
+
+
+
+
