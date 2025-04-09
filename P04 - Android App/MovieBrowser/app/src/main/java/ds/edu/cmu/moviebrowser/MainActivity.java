@@ -20,6 +20,29 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Application code built with GPT.
+ * Prompt:
+ * "Implement a native Android application
+ * a. Has at least three different kinds of Views in your Layout
+ *      (TextView, EditText, ImageView, or anything that extends
+ *      android.view.View). In order to figure out if something is a View,
+ *      find its API. If it extends android.view.View then it is a View.
+ * b. Requires input from the user
+ * c. Makes an HTTP request (using an appropriate HTTP method)
+ *      to your web service. Note that this request must be done using a
+ *      background thread (see Lab 8's use of BackgroundTask)
+ * d. Receives and parses an XML or JSON formatted reply from your web service
+ * e. Displays new information to the user
+ * f. Is repeatable (I.e. the user can repeatedly reuse the application without restarting it.)
+ *
+ * Using the above metrics, build an app for showing movie details to the users.
+ * The app will have a main landing page where users can search for a movie,
+ * this will connect to the tmdb service and get a list of movies,
+ * and show them on the screen.
+ * When user click on any of those, it makes another request to the tmdb service
+ * to get the details of that movie and show it to the user."
+ */
 public class MainActivity extends AppCompatActivity {
 
     private EditText searchEditText;
