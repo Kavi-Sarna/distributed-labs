@@ -92,6 +92,7 @@ public class MovieSearchServlet extends HttpServlet {
             logEntry.setTmdbEndpoint("/search/movie");
             logEntry.setTmdbResponseCode(200); // Assuming success
             logEntry.setTmdbResponseTime(tmdbResponseTime);
+            logEntry.setTmdbResponseJSON(jsonResponse.toString());
             logEntry.setResponseSize(jsonResponse.toString().length());
 
         } catch (Exception e) {
@@ -106,6 +107,7 @@ public class MovieSearchServlet extends HttpServlet {
             // Log error
             logEntry.setStatusCode(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             logEntry.setTmdbResponseCode(0); // No response from TMDB
+            logEntry.setTmdbResponseJSON(e.getMessage()); // No response from TMDB
             logEntry.setResponseSize(error.toString().length());
         } finally {
             // Calculate total response time and log request

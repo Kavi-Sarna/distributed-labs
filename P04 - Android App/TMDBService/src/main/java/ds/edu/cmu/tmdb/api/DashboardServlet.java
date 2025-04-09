@@ -35,11 +35,6 @@ public class DashboardServlet  extends HttpServlet {
         double averageTmdbResponseTime = loggingService.getAverageTmdbResponseTime();
         request.setAttribute("averageTmdbResponseTime", averageTmdbResponseTime);
 
-//        Map<String, Integer> deviceDistribution = loggingService.getDeviceDistribution(1);
-
-//        Map<String, Integer> dailyRequestCounts = loggingService.getDailyRequestCounts();
-
-//        request.setAttribute("logs", logs);
 
         // Forward to the JSP page
         request.getRequestDispatcher("/dashboard.jsp").forward(request, response);

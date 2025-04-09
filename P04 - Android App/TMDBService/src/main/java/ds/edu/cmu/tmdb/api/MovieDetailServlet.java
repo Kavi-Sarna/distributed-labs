@@ -75,6 +75,8 @@ public class MovieDetailServlet extends HttpServlet {
         // Validate movie ID
         try {
             movieId = Integer.parseInt(movieIdStr);
+
+            logEntry.setQueryParams(movieIdStr);
         } catch (NumberFormatException e) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             JsonObject error = new JsonObject();
@@ -109,6 +111,7 @@ public class MovieDetailServlet extends HttpServlet {
             logEntry.setTmdbEndpoint("/movie/" + movieId);
             logEntry.setTmdbResponseCode(200); // Assuming success
             logEntry.setTmdbResponseTime(tmdbResponseTime);
+            logEntry.setTmdbResponseJSON(movieDetail.toString());
             logEntry.setResponseSize(gson.toJson(movieDetail).length());
 
         } catch (Exception e) {
@@ -123,6 +126,7 @@ public class MovieDetailServlet extends HttpServlet {
             // Log error
             logEntry.setStatusCode(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             logEntry.setTmdbResponseCode(0); // No response from TMDB
+            logEntry.setTmdbResponseJSON(e.getMessage());
             logEntry.setResponseSize(error.toString().length());
         } finally {
             // Calculate total response time and log request

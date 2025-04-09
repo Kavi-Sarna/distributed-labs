@@ -88,6 +88,7 @@ public class LoggingService {
                     .append("tmdbEndpoint", logEntry.getTmdbEndpoint())
                     .append("tmdbResponseCode", logEntry.getTmdbResponseCode())
                     .append("tmdbResponseTime", logEntry.getTmdbResponseTime())
+                    .append("tmdbResponseJSON", logEntry.getTmdbResponseJSON())
                     .append("responseSize", logEntry.getResponseSize());
 
             collection.insertOne(doc);
@@ -278,6 +279,7 @@ public class LoggingService {
         entry.setTmdbEndpoint(doc.getString("tmdbEndpoint"));
         entry.setTmdbResponseCode(doc.getInteger("tmdbResponseCode"));
         entry.setTmdbResponseTime(doc.getLong("tmdbResponseTime"));
+        entry.setTmdbResponseJSON(doc.getString("tmdbResponseJSON"));
         entry.setResponseSize(doc.getInteger("responseSize"));
 
         return entry;

@@ -20,6 +20,7 @@ public class LogEntry {
     private String tmdbEndpoint;     // TMDB API endpoint called
     private int tmdbResponseCode;    // Response code from TMDB API
     private long tmdbResponseTime;   // Response time from TMDB API in milliseconds
+    private String tmdbResponseJSON;   // Response json from TMDB API
     private int responseSize;        // Size of response in bytes
 
     public LogEntry() {
@@ -121,6 +122,14 @@ public class LogEntry {
 
     public void setTmdbResponseTime(long tmdbResponseTime) {
         this.tmdbResponseTime = tmdbResponseTime;
+    }
+
+    public String getTmdbResponseJSON() {
+        return tmdbResponseJSON;
+    }
+
+    public void setTmdbResponseJSON(String tmdbResponseJSON) {
+        this.tmdbResponseJSON = tmdbResponseJSON;
     }
 
     public int getResponseSize() {
