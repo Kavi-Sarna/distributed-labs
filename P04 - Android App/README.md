@@ -90,7 +90,7 @@ Grace days **cannot** be used for Task 1.  Grace days, if you have some remainin
 Your application must be of your own creative design. (We will use software similarity detection software to identify those who do not.) It can be simple, but should fetch information from a 3rd party source and do something of at least marginal value.  For example, we have assigned projects that generate hash values, implement clickers, or manage a blockchain.  Your application should do something similarly simple but useful (but you should not reuse our ideas or the ideas of your peers!).
 
 The following is a diagram of the components for your this part of your application:
-![Task 2 Diagram](docs/Project4-Diagram-Partial.png)
+![Task 2 Diagram](Project4-Diagram-Partial.png)
 
 Your web service should be deployed to the cloud and provide a simple RESTful API similar to those you have developed in prior projects. You do NOT have to implement all HTTP methods, only those that make sense for your application. Your web service must fetch information from some 3rd party API.  In Project 1 you experimented with screen scraping, therefore that is not allowed in this project.  Rather, you must find an API that provides data via XML or JSON.  It is easy and can be fun to search for APIs; the [GitHub Public APIs repository](https://github.com/public-apis/public-apis) is a good place to start. But again, see the Banned API's list below.
 
@@ -144,7 +144,7 @@ Your application should test for and handle gracefully:
 Now enhance your web service to add logging, analysis, and reporting capabilities. In other words, create a web-based dashboard to your web service that will display information about how your service is being used. This will be web-page interface designed for laptop or desktop browser, not for mobile. In order to display logging and analytical data, you will have to first store it somewhere.  For this task, you are required to store your data in a noSQL database, or more specifically a MongoDB, database hosted in the cloud.
 
 The following is a diagram showing the dashboard components of your distributed application:
-![Task 2 Diagram](docs/Project4-Diagram-Full.png)
+![Task 2 Diagram](Project4-Diagram-Full.png)
 
 #### Logging data
 Your web service should keep track (i.e. log) data regarding its use.  You can decide what information would be useful to track for your web application, but you should track at least 6 pieces of information that would be useful for including in a dashboard for your application. It should include information about the request from the mobile phone, information about the request and reply to the 3rd party API, and information about the reply to the mobile phone.  Information can include such parameters as what kind of model of phone has made the request, parameters included in the request specific to your application, timestamps for when requests are received, requests sent to the 3rd party API, and the data sent in the reply back to the phone. Be creative about what is useful for your application.

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Oakland Aggravated Assaults</name>
+  <description>Aggravated assault crimes within 100 meters of 3803 Forbes Avenue</description>
+  <Style id="assaultStyle">
+    <IconStyle>
+      <color>ffff0000</color>
+      <scale>1.0</scale>
+    </IconStyle>
+  </Style>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 6/2/00, Time: 36679, Address: 3700 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95740996,40.44123704,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 5/14/00, Time: 36660, Address: 3900 FORBES AV</description>
+  <Point>
+    <coordinates>-79.9561512,40.44208775,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 9/24/99, Time: 36427, Address: 100 OAKLAND AV</description>
+  <Point>
+    <coordinates>-79.9575101,40.44231467,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 1/8/99, Time: 36168, Address: 3909 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95613528,40.44225947,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 7/24/98, Time: 36000, Address: 3700 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95740996,40.44123704,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 6/27/98, Time: 35973, Address: 3900 FORBES AV</description>
+  <Point>
+    <coordinates>-79.9561512,40.44208775,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 1/18/98, Time: 35813, Address: 3901 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95625513,40.44216359,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 11/8/97, Time: 35742, Address: 221 ATWOOD ST</description>
+  <Point>
+    <coordinates>-79.95711693,40.44105318,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 10/25/97, Time: 35728, Address: 3801 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95681096,40.44171892,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 10/24/96, Time: 35362, Address: 3700 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95740996,40.44123704,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 8/8/96, Time: 35285, Address: 3907 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95616413,40.44223638,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 7/31/96, Time: 35277, Address: 3803 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95680156,40.44172644,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 2/17/96, Time: 35112, Address: 3900 FORBES AV</description>
+  <Point>
+    <coordinates>-79.9561512,40.44208775,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 10/29/95, Time: 35001, Address: 3900 FIFTH AV</description>
+  <Point>
+    <coordinates>-79.95719574,40.44255153,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 9/5/95, Time: 34947, Address: 200 ATWOOD ST</description>
+  <Point>
+    <coordinates>-79.9575148,40.44122178,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 8/10/95, Time: 34921, Address: 3800 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95670703,40.44164308,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 9/4/94, Time: 34581, Address: 3900 FORBES AV</description>
+  <Point>
+    <coordinates>-79.9561512,40.44208775,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 3/4/94, Time: 34397, Address: 3800 FIFTH AV</description>
+  <Point>
+    <coordinates>-79.9574109,40.44234167,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 1/12/94, Time: 34346, Address: 3907 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95616413,40.44223638,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 11/6/93, Time: 34279, Address: 3700 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95740996,40.44123704,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 10/7/93, Time: 34249, Address: 3700 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95740996,40.44123704,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 8/7/93, Time: 34188, Address: 3900 FORBES AV</description>
+  <Point>
+    <coordinates>-79.9561512,40.44208775,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 7/13/93, Time: 34163, Address: 3900 FORBES AV</description>
+  <Point>
+    <coordinates>-79.9561512,40.44208775,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 6/26/93, Time: 34146, Address: 200 ATWOOD ST</description>
+  <Point>
+    <coordinates>-79.9575148,40.44122178,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 4/22/93, Time: 34081, Address: 100 OAKLAND AV</description>
+  <Point>
+    <coordinates>-79.9575101,40.44231467,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 3/20/93, Time: 34048, Address: 223 ATWOOD ST</description>
+  <Point>
+    <coordinates>-79.95708769,40.44102886,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 10/4/92, Time: 33881, Address: 100 N BOUQUET ST</description>
+  <Point>
+    <coordinates>-79.95728335,40.44250806,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 9/17/91, Time: 33498, Address: 3900 FORBES AV</description>
+  <Point>
+    <coordinates>-79.9561512,40.44208775,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 8/3/91, Time: 33453, Address: 3800 FORBES AV</description>
+  <Point>
+    <coordinates>-79.95670703,40.44164308,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 4/22/91, Time: 33350, Address: 223 ATWOOD ST</description>
+  <Point>
+    <coordinates>-79.95708769,40.44102886,0</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>Aggravated Assault</name>
+  <description>Date: 7/2/90, Time: 33056, Address: 3900 FORBES AV</description>
+  <Point>
+    <coordinates>-79.9561512,40.44208775,0</coordinates>
+  </Point>
+</Placemark>
+</Document>
+</kml>

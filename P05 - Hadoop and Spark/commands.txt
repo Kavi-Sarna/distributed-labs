@@ -1,0 +1,315 @@
+ssh -l student jumbo2.heinz.cmu.local
+        or
+ssh -oHostKeyAlgorithms=+ssh-rsa student@jumbo2.heinz.cmu.local
+
+
+home directory is /home/student
+
+
+nano filename.java        starts the editor
+<control> o               to save a file
+<control> x               to exit nano.
+
+
+The hadoop jars and binaries are store at /usr/local/hadoop/share/hadoop/mapreduce and /usr/local/hadoop/share/hadoop/common/.
+
+Your HDFS file system directories are at /user/student/output.
+
+
+sftp student@jumbo2.heinz.cmu.local
+sftp>put MaxTemperature.java
+sftp>get MaxTemperature.java
+
+
+The switch "2nr" means second column, numeric, reverse order. This is standard Linux and may be used when you are asked to sort a file.
+sort -k 2nr employee.txt
+
+
+cp -R source_dir destination_dir
+
+
+hdfs dfs -ls /user/student/input/
+
+hdfs dfs -copyFromLocal /home/student/input/1902.txt /user/student/input/1902.txt
+
+hdfs dfs -cat /user/student/input/testFile
+
+rm -r temperature_classes
+
+mkdir temperature_classes
+
+temperature_classes MaxTemperatureMapper.java MaxTemperatureReducer.java MaxTemperature.java
+
+javac -d temperature_classes -cp temperature_classes:$CLASSPATH MaxTemperatureMapper.java
+
+javac -d temperature_classes -cp temperature_classes:$CLASSPATH MaxTemperatureReducer.java
+
+javac -d temperature_classes -cp temperature_classes:$CLASSPATH MaxTemperature.java
+
+javac -d wordcount_classes WordCount.java
+
+
+echo $HADOOP_CLASSPATH
+echo $CLASSPATH
+
+
+rm temperature.jar
+
+jar -cvf temperature.jar -C  temperature_classes/  .
+
+mv LetterCount.java LetterCounter.java
+
+hdfs dfs -rm -r /user/student/output
+
+hdfs dfs -getmerge /user/student/output aCoolLocalFile
+
+mapred job -list
+
+mapred job -kill job_1727103369351_0002
+
+
+hadoop jar /home/student/temperature.jar edu.cmu.andrew.mm6.MaxTemperature  /user/student/input/combinedYears.txt /user/student/output
+
+hdfs dfs -getmerge /user/student/output coolProjectOutput
+
+cat coolProjectOutput
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cd
+mkdir Project5
+cd Project5
+mkdir Part_1
+cd Part_1
+mkdir Task0
+mkdir Task1
+mkdir Task2
+mkdir Task3
+mkdir Task4
+mkdir Task5
+mkdir Task6
+mkdir Task7
+
+
+
+cd Task0
+cd /home/public/
+ls
+vi WordCount.java
+cp WordCount.java /home/student/Project5/Part_1/Task0/
+ls
+cd /home/student/Project5/Part_1/Task0/
+ls
+mkdir wordcount_classes
+ls
+javac -d wordcount_classes WordCount.java
+ls
+cd wordcount_classes/
+ls
+cd org/myorg/
+ls
+cd ../../..
+ls
+jar -cvf wordcount.jar -C  wordcount_classes/  .
+ls
+hdfs dfs -copyFromLocal /home/public/words.txt /user/student/input/words.txt
+hdfs dfs -ls /user/student/input/
+hdfs dfs -ls /user/student/
+hdfs dfs -rm -r /user/student/output
+hadoop jar /home/student/Project5/Part_1/Task0/wordcount.jar org.myorg.WordCount  /user/student/input/words.txt /user/student/output
+hdfs dfs -ls /user/student/
+hdfs dfs -ls /user/student/output/
+hdfs dfs -cat /user/student/output/part-r-00000
+hdfs dfs -getmerge /user/student/output /home/student/Project5/Part_1/Task0/Task0Output
+ls
+
+
+
+cd ../Task1/
+hdfs dfs -rm -r /user/student/output
+hdfs dfs -ls /user/student/
+vi LetterCounter.java
+mkdir lettercount_classes
+javac -d lettercount_classes LetterCounter.java
+jar -cvf lettercount.jar -C  lettercount_classes/  .
+hdfs dfs -ls /user/student/input/
+hadoop jar /home/student/Project5/Part_1/Task1/lettercount.jar org.myorg.LetterCounter  /user/student/input/words.txt /user/student/output
+hdfs dfs -ls /user/student/output/
+hdfs dfs -cat /user/student/output/part-r-00000
+hdfs dfs -getmerge /user/student/output /home/student/Project5/Part_1/Task1/Task1Output
+sort -k 2nr Task1Output -o Task1Output
+cat Task1Output
+ls
+
+
+
+cd ../Task2/
+vi FindPattern.java
+mkdir findpattern_classes
+ls
+javac -d findpattern_classes FindPattern.java
+jar -cvf findpattern.jar -C  findpattern_classes/  .
+ls
+hdfs dfs -rm -r /user/student/output
+hdfs dfs -ls /user/student/
+hdfs dfs -ls /user/student/input/
+hadoop jar /home/student/Project5/Part_1/Task2/findpattern.jar org.myorg.FindPattern  /user/student/input/words.txt /user/student/output
+hdfs dfs -ls /user/student/output/
+hdfs dfs -cat /user/student/output/part-r-00000
+hdfs dfs -getmerge /user/student/output /home/student/Project5/Part_1/Task2/Task2Output
+ls
+cat Task2Output
+
+
+
+cd ../Task3/
+cd /home/public/
+ls
+vi combinedYears.txt
+cp MaxTemperature.java MaxTemperatureMapper.java MaxTemperatureReducer.java /home/student/Project5/Part_1/Task3/
+ls
+cd /home/student/Project5/Part_1/Task3/
+mkdir temperature_classes
+ls
+javac -d temperature_classes MaxTemperature.java MaxTemperatureMapper.java MaxTemperatureReducer.java
+ls
+cd temperature_classes/edu/cmu/andrew/mm6/
+ls
+cd /home/student/Project5/Part_1/Task3/
+ls
+jar -cvf temperature.jar -C  temperature_classes/  .
+ls
+hdfs dfs -rm -r /user/student/output
+hdfs dfs -ls /user/student/
+hdfs dfs -ls /user/student/input/
+hdfs dfs -copyFromLocal /home/public/combinedYears.txt /user/student/input/combinedYears.txt
+hdfs dfs -ls /user/student/input/
+hadoop jar /home/student/Project5/Part_1/Task3/temperature.jar edu.cmu.andrew.mm6.MaxTemperature  /user/student/input/combinedYears.txt /user/student/output
+hdfs dfs -ls /user/student/output/
+hdfs dfs -cat /user/student/output/part-00000
+hdfs dfs -getmerge /user/student/output /home/student/Project5/Part_1/Task3/Task3Output
+ls
+cat Task3Output
+
+
+
+cd ../Task4/
+vi MinTemperature.java
+vi MinTemperatureMapper.java
+vi MinTemperatureReducer.java
+ls
+mkdir temperature_classes
+ls
+javac -d temperature_classes MinTemperature.java MinTemperatureMapper.java MinTemperatureReducer.java
+ls
+cd temperature_classes/edu/cmu/andrew/mm6/
+ls
+cd /home/student/Project5/Part_1/Task4/
+ls
+jar -cvf mintemperature.jar -C  temperature_classes/  .
+ls
+hdfs dfs -rm -r /user/student/output
+hdfs dfs -ls /user/student/
+hdfs dfs -ls /user/student/input/
+hadoop jar /home/student/Project5/Part_1/Task4/mintemperature.jar edu.cmu.andrew.mm6.MinTemperature  /user/student/input/combinedYears.txt /user/student/output
+hdfs dfs -ls /user/student/output/
+hdfs dfs -cat /user/student/output/part-00000
+hdfs dfs -getmerge /user/student/output /home/student/Project5/Part_1/Task4/Task4Output
+ls
+cat Task4Output
+
+
+
+cd ../Task5/
+vi AggrAssaultPlusRobbery.java
+ls
+mkdir aggrAssault_classes
+ls
+javac -d aggrAssault_classes AggrAssaultPlusRobbery.java
+cd aggrAssault_classes/org/myorg/
+ls
+cd /home/student/Project5/Part_1/Task5/
+ls
+jar -cvf aggrvatedassaultsplusrobberies.jar -C  aggrAssault_classes/  .
+ls
+cd /home/public/
+ls
+hdfs dfs -copyFromLocal /home/public/P1V.txt /user/student/input/P1V.txt
+hdfs dfs -ls /user/student/input/
+hdfs dfs -rm -r /user/student/output
+hdfs dfs -ls /user/student/
+cd /home/student/Project5/Part_1/Task5/
+hadoop jar /home/student/Project5/Part_1/Task5/aggrvatedassaultsplusrobberies.jar org.myorg.AggrAssaultPlusRobbery  /user/student/input/P1V.txt /user/student/output
+hdfs dfs -ls /user/student/output/
+hdfs dfs -cat /user/student/output/part-r-00000
+hdfs dfs -getmerge /user/student/output /home/student/Project5/Part_1/Task5/Task5Output
+ls
+cat Task5Output
+
+
+
+
+cd ../Task6/
+vi OaklandCrimeStats.java
+ls
+mkdir aggrAssault_classes
+ls
+javac -d aggrAssault_classes OaklandCrimeStats.java
+ls
+cd aggrAssault_classes/org/myorg/
+ls
+cd /home/student/Project5/Part_1/Task6/
+ls
+jar -cvf oaklandcrimestats.jar -C  aggrAssault_classes/  .
+ls
+hdfs dfs -ls /user/student/
+hdfs dfs -rm -r /user/student/output
+hadoop jar /home/student/Project5/Part_1/Task6/oaklandcrimestats.jar org.myorg.OaklandCrimeStats  /user/student/input/P1V.txt /user/student/output
+hdfs dfs -ls /user/student/output/
+hdfs dfs -cat /user/student/output/part-r-00000
+hdfs dfs -getmerge /user/student/output /home/student/Project5/Part_1/Task6/Task6Output
+ls
+cat Task6Output
+
+
+
+cd ../Task7/
+cd /home/public/
+ls
+hdfs dfs -copyFromLocal /home/public/CrimeLatLonXYTabs.txt /user/student/input/CrimeLatLonXYTabs.txt
+hdfs dfs -ls /user/student/input/
+hdfs dfs -ls /user/student/
+hdfs dfs -rm -r /user/student/output
+hdfs dfs -ls /user/student/
+cd /home/student/Project5/Part_1/Task7/
+ls
+vi OaklandCrimeStatsKML.java
+mkdir aggrAssault_classes
+ls
+javac -d aggrAssault_classes OaklandCrimeStatsKML.java
+cd aggrAssault_classes/org/myorg/
+ls
+cd /home/student/Project5/Part_1/Task7/
+jar -cvf oaklandcrimestatskml.jar -C  aggrAssault_classes/  .
+ls
+hadoop jar /home/student/Project5/Part_1/Task7/oaklandcrimestatskml.jar org.myorg.OaklandCrimeStatsKML  /user/student/input/CrimeLatLonXYTabs.txt /user/student/output
+hdfs dfs -ls /user/student/output/
+hdfs dfs -cat /user/student/output/part-r-00000
+hdfs dfs -getmerge /user/student/output /home/student/Project5/Part_1/Task7/Task7Output
+ls
+cat Task7Output
+
+
