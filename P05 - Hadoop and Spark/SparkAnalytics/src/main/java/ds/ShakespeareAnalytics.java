@@ -1,3 +1,7 @@
+/**
+ * @author      Kavi Sarna
+ * @andrewId    ksarna
+ */
 package ds;
 
 import org.apache.spark.SparkConf;
@@ -12,10 +16,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * ShakespeareAnalytics.java
- * Author: [Your Name]
- *
- * This program uses Apache Spark to analyze Shakespeare's "All's Well That Ends Well"
+ * This program uses Apache Spark to analyze files
  * performing various text analytics such as counting lines, words, distinct words,
  * symbols, distinct symbols, distinct letters, and providing a case-sensitive search function.
  */
